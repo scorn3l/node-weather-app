@@ -30,7 +30,7 @@ app.get('', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'ceai',
+        helpText: 'Tipa aici trebuia sa fie ceva text care sa te ajute sa te razbiresti cu site-ul ista, da hz ce sa scriu ;))',
         title: 'Scoraia pomashi',
         name: 'sCorn3l'
     })
