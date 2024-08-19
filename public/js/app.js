@@ -1,6 +1,7 @@
+const PORT = process.env.PORT
 
 const weatherInfo = (address) => {
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+    fetch(`http://localhost:${PORT}/weather?address=${address}`).then((response) => {
         response.json().then((data) => {
             
             if (data.error) {
