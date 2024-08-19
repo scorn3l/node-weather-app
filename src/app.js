@@ -26,6 +26,10 @@ app.get('', (req, res) => {
         title: 'Weather app',
         name: 'sCorn3l'
     })
+    console.log(`-----------------------------------`)
+    console.log(`cineva s-o conectat la site - ip: ${req.ip}`)
+    console.log(req.headers)
+    console.log(`-----------------------------------`)
 })
 
 app.get('/help', (req, res) => {
