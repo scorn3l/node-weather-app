@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 10000
+const PORT = 10000
 
 const weatherInfo = (address) => {
     fetch(`http://localhost:${PORT}/weather?address=${address}`).then((response) => {
