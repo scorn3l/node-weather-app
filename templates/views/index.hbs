@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glavnaia</title>
+    <link rel="icon", href="/img/weather.png">
+    <link rel="stylesheet", href="/css/styles.css">
+    
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        
+        <p>Cauta temperatura la tine in gorad!</p>
+
+        <form>
+            <input placeholder="Adresa" id="inputBox">
+            <button id="submitBtn">Gazu</button>
+        </form>
+        <p id="msg1"></p>
+        <p id="msg2"></p>
+    </div>
+    
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
