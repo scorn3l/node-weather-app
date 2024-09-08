@@ -54,3 +54,88 @@ button{
     border-radius: 5px;
     
 }
+
+#qr-proprieties {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#qr-proprieties label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#qr-proprieties select,
+#qr-proprieties input[type="color"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#qr-proprieties input[type="text"] {
+    margin-bottom: 15px;
+}
+
+#qr-proprieties select {
+    background-color: #fff;
+}
+
+
+#qr-proprieties input[type="color"] {
+    width: auto;
+    padding: 20px;
+    border: 1px solid #000;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+}
+
+
+#qr-proprieties br {
+    margin: 10px 0;
+}
+
+
+#qr-gradientType,
+#qr-gradientOnEyes {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+#qr-gradientOnEyes {
+    margin-right: 0;
+}
+
+
+@media (max-width: 600px) {
+    #qr-proprieties {
+        padding: 10px;
+    }
+
+    #qr-proprieties select,
+    #qr-proprieties input[type="color"] {
+        width: 100%;
+    }
+
+    #qr-gradientType,
+    #qr-gradientOnEyes {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+    }
+}
+
+

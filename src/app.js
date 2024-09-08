@@ -3,6 +3,8 @@ const path = require('path')
 const hbs = require('hbs')
 const chalk = require('chalk')
 const weather = require('./utils/weather.js')
+const qrCode = require(`./utils/qr-code.js`)
+const { title } = require('process')
 
 const app = express()
 
@@ -20,16 +22,13 @@ hbs.registerPartials(partialsPath)
 // Static dir setup
 app.use(express.static(publicDirPath))
 
+app.use(express.json())
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather app',
+        title: 'Weather & QR app',
         name: 'sCorn3l'
     })
-    console.log(`-----------------------------------`)
-    console.log(`cineva s-o conectat la site - ip: ${req.ip}`)
-    console.log(req.headers)
-    console.log(`-----------------------------------`)
 })
 
 app.get('/help', (req, res) => {
@@ -47,6 +46,13 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('/qr', (req, res) => {
+    res.render('qr',{
+        title: 'Qr Generator',
+        name: 'sCorn3l'
+    })
+})
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
@@ -56,8 +62,26 @@ app.get('/weather', (req, res) => {
     weather(req.query.address, (error, weatherData) => {
         if (error) {
             return res.send({error})
+        } else {
+            res.send(weatherData)
         }
-        res.send(weatherData)
+        
+    })
+})
+
+app.post('/qr-api', (req, res) => {
+    if (!req.body.data) {
+        return res.send({
+            error: `vezi ca ai uitat sa pui textul din qr`
+        })
+    }
+    qrCode(req.body, (error, qrData) => {
+        if (error) {
+            return res.send({error})
+        } else {
+            res.send(qrData)
+        }
+        
     })
 })
 
