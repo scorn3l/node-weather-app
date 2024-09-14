@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Qr Code Gen </title>
-    <link rel="icon" , href="/img/weather.png">
+    <link rel="icon" href="/img/qr-icon.svg">
     <link rel="stylesheet" , href="/css/styles.css">
 </head>
 
@@ -13,148 +13,163 @@
         {{>header}}
         <p>Sacineste-ti un QR Code</p>
 
-        
-        
+
+
         <img class="qr" id="qrCodeImage" alt="Qr Code" style="display: none; margin-top 20px;">
         <p id="msg1"></p>
         <div id="qr-proprieties">
-            
-            <form>
-            <input placeholder="QR Text" type="text" id="inputBox">
-            <button id="submitBtn">Gazu</button>
-            </form>
-            <label for="qr-body">Alege body-ul:</label>
-            <select id="qr-body" name="body-prop">
-                <option value="square">Square</option>
-                <option value="mosaic">Mosaic</option>
-                <option value="dot">Dot</option>
-                <option value="circle">Circle</option>
-                <option value="circle-zebra">Circle zebra</option>
-                <option value="circle-zebra-vertical">Circle zebra vertical</option>
-                <option value="circular">Circular</option>
-                <option value="edge-cut">Edge cut</option>
-                <option value="edge-cut-smooth">Edge cut smooth</option>
-                <option value="japnese">Japnese</option>
-                <option value="leaf">Leaf</option>
-                <option value="pointed">Pointed</option>
-                <option value="pointed-edge-cut">Pointed edge cut</option>
-                <option value="pointed-in">Pointed in</option>
-                <option value="pointed-in-smooth">Pointed in smooth</option>
-                <option value="pointed-smooth">Pointed smooth</option>
-                <option value="round">Round</option>
-                <option value="rounded-in">Rounded in</option>
-                <option value="rounded-in-smooth">Rounded in smooth</option>
-                <option value="rounded-pointed">Rounded pointed</option>
-                <option value="star">Star</option>
-                <option value="diamond">Diamond</option>
-            </select>
-            <label for="qr-eye">Alege ochiul:</label>
-            <select id="qr-eye" name="eye-prop">
-                <option value="frame0">Cadru 0</option>
-                <option value="frame1">Cadru 1</option>
-                <option value="frame2">Cadru 2</option>
-                <option value="frame3">Cadru 3</option>
-                <option value="frame4">Cadru 4</option>
-                <option value="frame5">Cadru 5</option>
-                <option value="frame6">Cadru 6</option>
-                <option value="frame7">Cadru 7</option>
-                <option value="frame8">Cadru 8</option>
-                <option value="frame9">Cadru 9</option>
-                <option value="frame10">Cadru 10</option>
-                <option value="frame11">Cadru 11</option>
-                <option value="frame12">Cadru 12</option>
-                <option value="frame13">Cadru 13</option>
-                <option value="frame14">Cadru 14</option>
-                <option value="frame15">Cadru 15</option>
-                <option value="frame16">Cadru 16</option>
-            </select>
-            <br>
-            <label for="qr-eyeball">Alege globul ocular:</label>
-            <select name="eyeball-prop" id="qr-eyeball">
-                <option value="ball0">Glob ocular 0</option>
-                <option value="ball1">Glob ocular 1</option>
-                <option value="ball2">Glob ocular 2</option>
-                <option value="ball3">Glob ocular 3</option>
-                <option value="ball4">Glob ocular 4</option>
-                <option value="ball5">Glob ocular 5</option>
-                <option value="ball6">Glob ocular 6</option>
-                <option value="ball7">Glob ocular 7</option>
-                <option value="ball8">Glob ocular 8</option>
-                <option value="ball9">Glob ocular 9</option>
-                <option value="ball10">Glob ocular 10</option>
-                <option value="ball11">Glob ocular 11</option>
-                <option value="ball12">Glob ocular 12</option>
-                <option value="ball13">Glob ocular 13</option>
-                <option value="ball14">Glob ocular 14</option>
-                <option value="ball15">Glob ocular 15</option>
-                <option value="ball16">Glob ocular 16</option>
-                <option value="ball17">Glob ocular 17</option>
-                <option value="ball18">Glob ocular 18</option>
-                <option value="ball19">Glob ocular 19</option>
-            </select>
-            <br>
-            <label for="qr-erf1">Alege inversarea la ochiul 1:</label>
-            <select name="erf1-prop" id="qr-erf1">
-                <option value="">Fara inversiune</option>
-                <option value="fv">Inversiune verticala</option>
-                <option value="fh">Inversiune orizontala</option>
-                <option value="fv,fh">Ambele inversiuni</option>
-            </select>
-            <label for="qr-erf2">Alege inversarea la ochiul 2:</label>
-            <select name="erf2-prop" id="qr-erf2">
-                <option value="">Fara inversiune</option>
-                <option value="fv">Inversiune verticala</option>
-                <option value="fh">Inversiune orizontala</option>
-                <option value="fv,fh">Ambele inversiuni</option>
-            </select>
-            <label for="qr-erf3">Alege inversarea la ochiul 3:</label>
-            <select name="erf3-prop" id="qr-erf3">
-                <option value="">Fara inversiune</option>
-                <option value="fv">Inversiune verticala</option>
-                <option value="fh">Inversiune orizontala</option>
-                <option value="fv,fh">Ambele inversiuni</option>
-            </select>
-            <br>
-            <label for="qr-bodyColor">Introdu culoarea body-ului:</label>
-            <input type="color" id="qr-bodyColor">
-            <label for="qr-bgColor">Introdu culoarea fundalului:</label>
-            <input type="color" id="qr-bgColor">
-            <br>
-            <label for="qr-eye1Color">Introdu culoarea ochiului 1:</label>
-            <input type="color" id="qr-eye1Color">
-            <label for="qr-eye2Color">Introdu culoarea ochiului 2:</label>
-            <input type="color" id="qr-eye2Color">
-            <label for="qr-eye3Color">Introdu culoarea ochiului 3:</label>
-            <input type="color" id="qr-eye3Color">
-            <br>
-            <label for="qr-eyeBall1Color">Introdu culoarea globului ocular 1:</label>
-            <input type="color" id="qr-eyeBall1Color">
-            <label for="qr-eyeBall2Color">Introdu culoarea globului ocular 2:</label>
-            <input type="color" id="qr-eyeBall2Color">
-            <label for="qr-eyeBall3Color">Introdu culoarea globului ocular 3:</label>
-            <input type="color" id="qr-eyeBall3Color">
-            <br>
-        <label for="qr-gradientIsOn">Gradient</label>
-            <select name="gradientIsOn-prop" , id="qr-gradientIsOn">
-                <option value="false">Nu</option>
-                <option value="true">Da</option>
-            </select>
-        <label for="qr-gradientColor1">Introdu culoarea gradientului 1:</label>
-            <input type="color" id="qr-gradientColor1">
-            <label for="qr-gradientColor2">Introdu culoarea gradientului 2:</label>
-            <input type="color" id="qr-gradientColor2">
-            <br>
-            <label for="qr-gradientType">Alege tipul gradientului:</label>
-            <select name="gradientType-prop" , id="qr-gradientType">
-                <option value="linear">Linear</option>
-                <option value="radial">Radial</option>
-            </select>
-            <label for="qr-gradientOnEyes">Afisarea gradientului pe ochi:</label>
-            <select name="gradientOnEyes-prop" , id="qr-gradientOnEyes">
-                <option value="false">Nu</option>
-                <option value="true">Da</option>
-            </select>
 
+            <form id="qr-form">
+                <label for="qr-text">Scrie textul QR Codului:</label>
+                <input placeholder="QR Text" type="text" id="qr-text">
+                <button id="submitBtn">Gazu</button>
+                <label class="errorLabel" id="qr-text-error" style="display: none;"></label>
+            </form>
+            <button id="clearBtn">Sterge textul</button>
+            <button id="resetBtn">Sterge proprietatile</button>
+
+            <form id="qr-props">
+
+                <label for="qr-size" id="qr-size-label">Scrie numarul de pixeli pentru QR Cod:</label>
+                <input placeholder="Qr Code Pixel Size" type="number" id="qr-size">
+                <label class="errorLabel" id="qr-size-error" style="display: none;"></label>
+                <label for="qr-extension">Alege extensia fisierului:</label>
+                <select name="extension-prop" id="qr-extension">
+                    <option value="png">PNG</option>
+                    <option value="svg">SVG</option>
+                </select>
+                <label for="qr-body">Alege body-ul:</label>
+                <select id="qr-body" name="body-prop">
+                    <option value="square">Square</option>
+                    <option value="mosaic">Mosaic</option>
+                    <option value="dot">Dot</option>
+                    <option value="circle">Circle</option>
+                    <option value="circle-zebra">Circle zebra</option>
+                    <option value="circle-zebra-vertical">Circle zebra vertical</option>
+                    <option value="circular">Circular</option>
+                    <option value="edge-cut">Edge cut</option>
+                    <option value="edge-cut-smooth">Edge cut smooth</option>
+                    <option value="japnese">Japnese</option>
+                    <option value="leaf">Leaf</option>
+                    <option value="pointed">Pointed</option>
+                    <option value="pointed-edge-cut">Pointed edge cut</option>
+                    <option value="pointed-in">Pointed in</option>
+                    <option value="pointed-in-smooth">Pointed in smooth</option>
+                    <option value="pointed-smooth">Pointed smooth</option>
+                    <option value="round">Round</option>
+                    <option value="rounded-in">Rounded in</option>
+                    <option value="rounded-in-smooth">Rounded in smooth</option>
+                    <option value="rounded-pointed">Rounded pointed</option>
+                    <option value="star">Star</option>
+                    <option value="diamond">Diamond</option>
+                </select>
+                <label for="qr-eye">Alege ochiul:</label>
+                <select id="qr-eye" name="eye-prop">
+                    <option value="frame0">Cadru 0</option>
+                    <option value="frame1">Cadru 1</option>
+                    <option value="frame2">Cadru 2</option>
+                    <option value="frame3">Cadru 3</option>
+                    <option value="frame4">Cadru 4</option>
+                    <option value="frame5">Cadru 5</option>
+                    <option value="frame6">Cadru 6</option>
+                    <option value="frame7">Cadru 7</option>
+                    <option value="frame8">Cadru 8</option>
+                    <option value="frame9">Cadru 9</option>
+                    <option value="frame10">Cadru 10</option>
+                    <option value="frame11">Cadru 11</option>
+                    <option value="frame12">Cadru 12</option>
+                    <option value="frame13">Cadru 13</option>
+                    <option value="frame14">Cadru 14</option>
+                    <option value="frame15">Cadru 15</option>
+                    <option value="frame16">Cadru 16</option>
+                </select>
+                <br>
+                <label for="qr-eyeball">Alege globul ocular:</label>
+                <select name="eyeball-prop" id="qr-eyeball">
+                    <option value="ball0">Glob ocular 0</option>
+                    <option value="ball1">Glob ocular 1</option>
+                    <option value="ball2">Glob ocular 2</option>
+                    <option value="ball3">Glob ocular 3</option>
+                    <option value="ball4">Glob ocular 4</option>
+                    <option value="ball5">Glob ocular 5</option>
+                    <option value="ball6">Glob ocular 6</option>
+                    <option value="ball7">Glob ocular 7</option>
+                    <option value="ball8">Glob ocular 8</option>
+                    <option value="ball9">Glob ocular 9</option>
+                    <option value="ball10">Glob ocular 10</option>
+                    <option value="ball11">Glob ocular 11</option>
+                    <option value="ball12">Glob ocular 12</option>
+                    <option value="ball13">Glob ocular 13</option>
+                    <option value="ball14">Glob ocular 14</option>
+                    <option value="ball15">Glob ocular 15</option>
+                    <option value="ball16">Glob ocular 16</option>
+                    <option value="ball17">Glob ocular 17</option>
+                    <option value="ball18">Glob ocular 18</option>
+                    <option value="ball19">Glob ocular 19</option>
+                </select>
+                <br>
+                <label for="qr-erf1">Alege inversarea la ochiul 1:</label>
+                <select name="erf1-prop" id="qr-erf1">
+                    <option value="">Fara inversiune</option>
+                    <option value="fv">Inversiune verticala</option>
+                    <option value="fh">Inversiune orizontala</option>
+                    <option value="fv,fh">Ambele inversiuni</option>
+                </select>
+                <label for="qr-erf2">Alege inversarea la ochiul 2:</label>
+                <select name="erf2-prop" id="qr-erf2">
+                    <option value="">Fara inversiune</option>
+                    <option value="fv">Inversiune verticala</option>
+                    <option value="fh">Inversiune orizontala</option>
+                    <option value="fv,fh">Ambele inversiuni</option>
+                </select>
+                <label for="qr-erf3">Alege inversarea la ochiul 3:</label>
+                <select name="erf3-prop" id="qr-erf3">
+                    <option value="">Fara inversiune</option>
+                    <option value="fv">Inversiune verticala</option>
+                    <option value="fh">Inversiune orizontala</option>
+                    <option value="fv,fh">Ambele inversiuni</option>
+                </select>
+                <br>
+                <label for="qr-bodyColor">Introdu culoarea body-ului:</label>
+                <input type="color" id="qr-bodyColor">
+                <label for="qr-bgColor">Introdu culoarea fundalului:</label>
+                <input type="color" id="qr-bgColor">
+                <br>
+                <label for="qr-eye1Color">Introdu culoarea ochiului 1:</label>
+                <input type="color" id="qr-eye1Color">
+                <label for="qr-eye2Color">Introdu culoarea ochiului 2:</label>
+                <input type="color" id="qr-eye2Color">
+                <label for="qr-eye3Color">Introdu culoarea ochiului 3:</label>
+                <input type="color" id="qr-eye3Color">
+                <br>
+                <label for="qr-eyeBall1Color">Introdu culoarea globului ocular 1:</label>
+                <input type="color" id="qr-eyeBall1Color">
+                <label for="qr-eyeBall2Color">Introdu culoarea globului ocular 2:</label>
+                <input type="color" id="qr-eyeBall2Color">
+                <label for="qr-eyeBall3Color">Introdu culoarea globului ocular 3:</label>
+                <input type="color" id="qr-eyeBall3Color">
+                <br>
+                <label for="qr-gradientIsOn">Gradient</label>
+                <select name="gradientIsOn-prop" , id="qr-gradientIsOn">
+                    <option value="false">Nu</option>
+                    <option value="true">Da</option>
+                </select>
+                <label for="qr-gradientColor1">Introdu culoarea gradientului 1:</label>
+                <input type="color" id="qr-gradientColor1">
+                <label for="qr-gradientColor2">Introdu culoarea gradientului 2:</label>
+                <input type="color" id="qr-gradientColor2">
+                <br>
+                <label for="qr-gradientType">Alege tipul gradientului:</label>
+                <select name="gradientType-prop" , id="qr-gradientType">
+                    <option value="linear">Linear</option>
+                    <option value="radial">Radial</option>
+                </select>
+                <label for="qr-gradientOnEyes">Afisarea gradientului pe ochi:</label>
+                <select name="gradientOnEyes-prop" , id="qr-gradientOnEyes">
+                    <option value="false">Nu</option>
+                    <option value="true">Da</option>
+                </select>
+            </form>
 
         </div>
 

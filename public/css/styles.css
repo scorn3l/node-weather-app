@@ -41,19 +41,57 @@ header a {
     width: 700px;
 }
 
-input {
+input{
     border: 1px solid #797575;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 15px;
+}
+
+input[type="text"] {
+    width: 80%;
 }
 
 button{
     cursor: pointer;
-    border: 1px solid #797575;
+    border: 2px solid #056077;
     padding: 8px;
-    border-radius: 5px;
+    background-color: #00b8e6;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #f3f2f2;
     
 }
+
+.errorLabel{
+    font-size: 13px;
+    margin-bottom: 10px !important;
+    margin-top: -15px;
+    color: #b90808 !important;
+}
+
+#submitBtn{
+    width: 15%;
+}
+
+#clearBtn {
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+#resetBtn{
+    width: 30%;
+}
+
+#qrCodeImage{
+    width: 300px;
+}
+
+#qr-proprieties input[type="number"],
+#qr-proprieties input[type="text"] {
+    margin-bottom: 15px;
+}
+
+/* Astea de mai jos is luate de pe gpt (nu prea is eu cu css-u) */
 
 #qr-proprieties {
     font-family: Arial, sans-serif;
@@ -84,9 +122,6 @@ button{
     box-sizing: border-box;
 }
 
-#qr-proprieties input[type="text"] {
-    margin-bottom: 15px;
-}
 
 #qr-proprieties select {
     background-color: #fff;
@@ -94,11 +129,9 @@ button{
 
 
 #qr-proprieties input[type="color"] {
-    width: auto;
     padding: 20px;
     border: 1px solid #000;
     height: 40px;
-    width: 80px;
     cursor: pointer;
 }
 
