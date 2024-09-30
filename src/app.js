@@ -39,6 +39,13 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/calc', (req, res) => {
+    res.render('calc', {
+        title: 'Calculeator',
+        name: 'sCorn3l'
+    })
+})
+
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Despre',

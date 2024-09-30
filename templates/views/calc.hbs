@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculeator</title>
+    <link rel="icon", href="/img/weather.png">
+    <link rel="stylesheet", href="/css/styles.css">
+    
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        
+        <p>Calculeaza la fizica</p>
+        <select id="calc-type"> 
+            <option value="2"> Full tabel</option>
+        </select>
+        <button id="calcPickBtn"> Alege </button>
+        <br><br>
+        <div id="calc-1-div" style="display: none;">
+            <input placeholder="P0" type="number" id="p-zero-value">
+            <br> <br>
+            <input placeholder="Densitatea" type="number" id="ro-value">
+            <br> <br>
+            <input placeholder="H" type="number" id="H-value">
+            <br> <br>
+            <input placeholder="h1" type="number" id="h1-value">
+            <br> <br>
+            <input placeholder="h2" type="number" id="h2-value">
+            <button id="calc-btn1">Calculeaza</button>
+            
+        </div>
+        <div id="calc-2-div" style="display: none;">
+            <input placeholder="P0" type="number" id="p-zero-value1">
+            <input placeholder="Densitatea" type="number" id="ro-value1">
+            <br> <br>
+            <input placeholder="H (1)" type="number" id="H-value1">
+            <input placeholder="H (2)" type="number" id="H-value2">
+            <input placeholder="H (3)" type="number" id="H-value3">
+            <br> <br>
+            <input placeholder="h1 (1)" type="number" id="h1-value1">
+            <input placeholder="h1 (2)" type="number" id="h1-value2">
+            <input placeholder="h1 (3)" type="number" id="h1-value3">
+            <br> <br>
+            <input placeholder="h2 (1)" type="number" id="h2-value1">
+            <input placeholder="h2 (2)" type="number" id="h2-value2">
+            <input placeholder="h2 (3)" type="number" id="h2-value3">
+            <br> <br>
+            <button id="calc-btn2">Calculeaza</button>
+        </div>
+        
+
+
+        <p id="msg1"></p>
+        <p id="msg2"></p>
+    </div>
+    
+    {{>footer}}
+    <script src="/js/calc.js"></script>
+</body>
+
+</html>
